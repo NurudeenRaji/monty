@@ -7,7 +7,8 @@ void get_entry(void)
 	instruction_t entry[] = {
 		{"push", &push},
 		{"pall", &pall},
-		{"pint", &pint}, 
+		{"pint", &pint},
+		{"pop", &pop},
 		{NULL, NULL}
 	};
 
