@@ -1,0 +1,5 @@
+#!/bin/bash
+
+git add .
+git commit -m "Monty project"
+git push
