@@ -11,7 +11,7 @@ void get_entry(void)
 		{"pop", &pop},
 		{"swap", &swap},
 		{"add", &add},
-		{"nope", &nop},
+		{"nop", &nop},
 		{NULL, NULL}
 	};
 
