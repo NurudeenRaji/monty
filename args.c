@@ -22,6 +22,15 @@ void run_args(void)
         if (args == NULL)
                 mem_error();
 
+	args->instruct = malloc(sizeof(instruction_t));
+	if (args->instruct == NULL)
+		mem_error();
+
         args->stream = NULL;
         args->line = NULL;
+	args->head = NULL;
+	args->tokens = NULL;
+	args->stack_length = 0;
+	args->n_tokens = 0;
+	args->line_num = 0;
 }

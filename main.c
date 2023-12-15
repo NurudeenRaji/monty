@@ -17,8 +17,15 @@ int main(int argc, char **argv)
 
 	while (getline(&args->line, &size, args->stream) != -1)
 	{
-		printf("%s", args->line);
+		args->line_num += 1;
+		tokenize();
+		get_entry();
+		run_entry();
+		free_toks();
 	}
+
+	close_file();
+	free_args();
 
 	return (0);
 }

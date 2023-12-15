@@ -41,6 +41,12 @@ typedef struct stream
 {
 	FILE *stream;
 	char *line;
+	unsigned int line_num;
+	char **tokens;
+	int n_tokens;
+	instruction_t *instruct;
+	stack_t *head;
+	int stack_length;
 } stream_s;
 
 extern stream_s *args;
@@ -48,7 +54,21 @@ extern stream_s *args;
 void check_args(int argc);
 void mem_error(void);
 void run_args(void);
+void close_file(void);
 void get_stream(const char *filename, FILE **file);
 void stream_error(const char *filename);
+void tokenize(void);
+void get_entry(void);
+void unknown_entry(void);
+void free_toks(void);
+void free_args(void);
+void free_head(void);
+void free_stack(stack_t *head);
+void run_entry(void);
+void pall(stack_t **stack, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_number);
+int is_num(char *s);
+void pint(stack_t **stack, unsigned int line_number);
+
 
 #endif
