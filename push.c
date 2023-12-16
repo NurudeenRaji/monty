@@ -1,5 +1,14 @@
 #include "monty.h"
 
+void push(stack_t **stack, unsigned int line_number);
+int is_num(char *s);
+
+/**
+ * push - Add a node to the stack.
+ * @stack: Pointer to the stack itself.
+ * @line_number: The line number to add the node.
+ */
+
 void push(stack_t **stack, unsigned int line_number)
 {
 	if (args->n_tokens <= 1 || !(is_num(args->tokens[1])))
@@ -27,6 +36,12 @@ void push(stack_t **stack, unsigned int line_number)
 	args->head = *stack;
 	args->stack_length += 1;
 }
+
+/*
+ * is_num - check the entry if it's a number.
+ * @s: the string to check.
+ * Return: 1(Success).
+ */
 
 int is_num(char *s)
 {

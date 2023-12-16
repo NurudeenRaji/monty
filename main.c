@@ -4,6 +4,8 @@ stream_s *args = NULL;
 
 /**
  * main - Program entry point.
+ * @argc: number of argument passed.
+ * @argv: argument vector.
  * Return: 0 (Success).
  */
 

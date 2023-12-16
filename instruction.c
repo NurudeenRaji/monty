@@ -1,5 +1,14 @@
 #include "monty.h"
 
+void get_entry(void);
+void unknown_entry(void);
+void close_file(void);
+void run_entry(void);
+
+/**
+ * get_entry - Processes the functions.
+ */
+
 void get_entry(void)
 {
 	int i;
@@ -31,6 +40,10 @@ void get_entry(void)
 	unknown_entry();
 }
 
+/**
+ * unknown_entry: Clean-up error for unprocessed entry.
+ */
+
 void unknown_entry(void)
 {
 	fprintf(stderr, "L%d: unknown instruction %s\n", args->line_num, args->tokens[0]);
@@ -40,6 +53,9 @@ void unknown_entry(void)
 	exit(EXIT_FAILURE);
 }
 
+/**
+ * close_file - closes the file.
+ */
 
 void close_file(void)
 {
@@ -48,6 +64,10 @@ void close_file(void)
 	fclose(args->stream);
 	args->stream = NULL;
 }
+
+/**
+ * run_entry: executes the commands.
+ */
 
 void run_entry(void)
 {

@@ -1,10 +1,13 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+/* HEADERS */
 #define  _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+/* STRUCTURES */
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -36,6 +39,17 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct stream - the file content to check.
+ * @stream: the bytecodes in the file.
+ * @line: each line of the stream.
+ * @line_num: the line numbers.
+ * @tokens: used to tokenize.
+ * @n_tokens: the number of words in the tokenized string.
+ * @instruct: checks the instruction to execute.
+ * @head: pointer to the head.
+ * @stack_length: used to monitor the length of the stack.
+ */
 
 typedef struct stream
 {
@@ -49,8 +63,10 @@ typedef struct stream
 	int stack_length;
 } stream_s;
 
+/* GLOBAL VARIABLE */
 extern stream_s *args;
 
+/* FUCNTION PROTOTYPES */
 void check_args(int argc);
 void mem_error(void);
 void run_args(void);

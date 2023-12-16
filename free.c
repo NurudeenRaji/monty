@@ -1,5 +1,14 @@
 #include "monty.h"
 
+void free_args(void);
+void free_toks(void);
+void free_head(void);
+void free_stack(stack_t *head);
+
+/**
+ * free_toks - frees the token.
+ */
+
 void free_toks(void)
 {
         size_t i;
@@ -16,6 +25,10 @@ void free_toks(void)
         free(args->tokens);
         args->tokens = NULL;
 }
+
+/**
+ * free_args - frees the argument pointer.
+ */
 
 void free_args(void)
 {
@@ -38,12 +51,21 @@ void free_args(void)
         free(args);
 }
 
+/**
+ * free_head - frees the head.
+ */
+
 void free_head(void)
 {
         if (args->head)
                 free_stack(args->head);
         args->head = NULL;
 }
+
+/**
+ * free_stack - frees the stack.
+ * @head: pointer to the head.
+ */
 
 void free_stack(stack_t *head)
 {
