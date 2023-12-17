@@ -10,7 +10,7 @@ void div(stack_t **stack, unsigned int line_number)
 {
 	stack_t *node1, *node2;
 
-	(void)stack;
+	(void) stack;
 	if(args->stack_length < 2)
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
