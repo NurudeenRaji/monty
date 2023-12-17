@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * swap - swaps a node for another.
+ * @stack: pointer to the stack structure.
+ * @line_number: the stack line number.
+ */
+
 void swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *node1, *node2;

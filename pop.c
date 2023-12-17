@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * pop - removes the node at the top of the stack.
+ * @stack: pointerb to the stack structure.
+ * @line_number: the stack line number.
+ */
+
 void pop(stack_t **stack, unsigned int line_number)
 {
 	(void) stack;
@@ -16,6 +22,10 @@ void pop(stack_t **stack, unsigned int line_number)
 	remove_node();
 	args->stack_length -= 1;
 }
+
+/**
+ * remove_node - performs the pop.
+ */
 
 void remove_node(void)
 {

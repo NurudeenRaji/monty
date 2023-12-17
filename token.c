@@ -1,5 +1,9 @@
 #include "monty.h"
 
+/**
+ * tokenize: Tokenizes the arguments passed with monty.
+ */
+
 void tokenize(void)
 {
 	int i = 0;
