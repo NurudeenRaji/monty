@@ -6,7 +6,7 @@
  * @line_number: the stack line number.
  */
 
-void div(stack_t **stack, unsigned int line_number)
+void div_op(stack_t **stack, unsigned int line_number)
 {
 	stack_t *node1, *node2;
 

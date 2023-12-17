@@ -22,7 +22,7 @@ void get_entry(void)
 		{"add", &add},
 		{"nop", &nop},
 		{"sub", &sub},
-		{"div", &div},
+		{"div_op", &div_op},
 		{NULL, NULL}
 	};
 
